@@ -23,7 +23,7 @@ mod tests {
     fn regular_structs() {
         // TODO: Instantiate a regular struct.
         // let green =
-
+        let green = ColorRegularStruct{red:0,green:255,blue:0};
         assert_eq!(green.red, 0);
         assert_eq!(green.green, 255);
         assert_eq!(green.blue, 0);
