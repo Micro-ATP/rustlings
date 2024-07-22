@@ -8,6 +8,7 @@ fn bigger(a: i32, b: i32) -> i32 {
 
 fn main() {
     // You can optionally experiment here.
+    bigger(1,2);
 }
 
 // Don't mind this for now :)
