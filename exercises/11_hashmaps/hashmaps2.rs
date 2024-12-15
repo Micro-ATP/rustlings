@@ -6,7 +6,18 @@
 // must add fruit to the basket so that there is at least one of each kind and
 // more than 11 in total - we have a lot of mouths to feed. You are not allowed
 // to insert any more of the fruits that are already in the basket (Apple,
-// Mango, and Lychee).
+// Mango, and Lyche).
+/*
+任务：我们正在收集不同的水果以烘焙一个美味的水果蛋糕。
+数据结构：我们使用一个哈希表（hash map）来表示一个篮子。
+哈希表的键：代表每种水果的名称。
+哈希表的值：代表我们收集了多少该水果。
+初始状态：篮子中已经有三种水果：苹果（4个）、芒果（2个）和荔枝（5个）。
+要求：
+必须确保篮子里每种水果至少有一个。
+总数必须超过11个，因为我们需要喂养很多人。
+不允许再插入已存在的水果（苹果、芒果和荔枝）。
+*/
 
 use std::collections::HashMap;
 
@@ -32,6 +43,9 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         // TODO: Insert new fruits if they are not already present in the
         // basket. Note that you are not allowed to put any type of fruit that's
         // already present!
+        if !basket.contains_key(&fruit) {
+            basket.insert(fruit, 1);
+        }
     }
 }
 
